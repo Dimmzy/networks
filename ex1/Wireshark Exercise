@@ -1,0 +1,24 @@
+6103 packets sniffed from three web pages
+Out of them, 172 (2.8%) were UDP packets
+Current IP Address: 172.18.36.119
+
+From those, we chose one packet we sent: (query)
+It's a packet we've sent from our PC since the source IP is our own.
+The source port is 47053 and the destination port (server listening on) is 53
+Source IP is 172.18.36.119 and the destination IP is 132.70.60.124
+Source MAC is 34:f6:4b:bb:04:9a and the destination MAC is 00:1c:7f:00:00:01
+
+The corresponding packet is: (response)
+A packet we've received from the previous destination IP (now as source IP)
+The source port is 53 (the server) and the destination port is 47053 (client)
+Source IP is 132.70.60.124 (server) and the destination IP is 172.18.36.119 (client)
+Source MAC is 00:1c:7f:65:e9:35 and destination MAC is 34:f6:4b:bb:04:9a
+
+When we filter the packets we send by DNS and our source IP we can see that every two packets we send,
+the source port changes, while the destination port is always the same.
+Which means that we open a socket with a random port each packet we send.
+When we reverse the filter to packets we receive, we can see that the destination port
+of the packets changes accordingly to our generated socket for that packet query and response,
+while the source port (53) always stays the same (the server's listening port).
+As such, we can see that we can filter for packets sent by the DNS query-response protocol
+by simply filtering by the 53 port which seems to be reserved to DNS queries.
