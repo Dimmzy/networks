@@ -1,3 +1,4 @@
-www.google.co.il,8.8.8.8
-google.co.il,8.8.8.8
+more.ips,11.111.1.1
+and.somemore,123.321.2.1
+more.erom,66.55.44.33
 mail.google.co.il,9.9.9.9
