@@ -31,7 +31,7 @@ def main():
     """
     ip_list = open(str(sys.argv[4]), 'r+')
     ip_dict = make_dict(ip_list) # We create a dictionary using make_dict func
-    source_ip = '0.0.0.0' # Receives IP/Port information from main args
+    source_ip = '0.0.0.0' # Listens to all the network cards
     source_port = int(sys.argv[1])
     parent_ip = str(sys.argv[2])
     parent_port = int(sys.argv[3])
