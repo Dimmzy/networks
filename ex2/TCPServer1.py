@@ -1,13 +1,14 @@
-# TCP Server
 
-import socket, threading,
+import socket, threading
 
+# Creates socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_ip = '0.0.0.0'
 server_port = 12345
 server.bind((server_ip,server_port))
 server.listen(0)
 
+# Receives information until socket is closed
 while True:
 	client_socket, client_address = server.accept()
 	print 'Connection from:', client_address
@@ -20,3 +21,4 @@ while True:
 
 	print 'Client disconnected'
 	client_socket.close()
+server.close()
