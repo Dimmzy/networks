@@ -1,6 +1,6 @@
 # networks
-Exercises in UDP/TCP servers and packet analysis using Wireshark.
-Both include server side code and client side code.
+Exercises in UDP/TCP servers and packet analysis using Wireshark.  
+Both include server side code and client side code and pcap files with the packets analyzed.
 # Exercise 1
 First exercise consists of testing requests and answers on an echo test server and the correlating packets that are being sent.  
 # Exercise 2
